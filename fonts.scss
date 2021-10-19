@@ -1,0 +1,23 @@
+@mixin font($fname, $fontweight, $fnamefull, $fontstyle) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fontstyle;
+		font-weight: $fontweight;
+		src: url('/fonts/'+ $fnamefull +'.eot') format("eot");
+		src: url('/fonts/'+ $fnamefull +'.otf') format("eot");
+		src: url('/fonts/'+ $fnamefull +'.svg') format("svg");
+		src: url('/fonts/'+ $fnamefull +'.ttf') format("ttf");
+		src: url('/fonts/'+ $fnamefull +'.woff') format("woff");
+		src: url('/fonts/'+ $fnamefull +'.woff2') format("woff2");
+	}
+}
+@include font(ConthraxSb,400,'ConthraxSb-Regular',normal);
+@include font(gilroyextra,700,'gilroyextra-bold',normal);
+@include font(Intro,normal,'Intro',normal);
+@include font(IntroInline,normal,'IntroInline',normal);
+@include font(Montserrat,700,'Montserrat-Bold',normal);
+@include font(Montserrat,500,'Montserrat-italic-Medium',normal);
+@include font(Montserrat,500,'Montserrat-Medium',normal);
+@include font(Montserrat,600,'Montserrat-SemiBold',normal);
+@include font(Montserrat,600,'Montserratitalic-SemiBold',normal);
+@include font(MyriadPro,400,'MyriadPro-Regular',normal);
