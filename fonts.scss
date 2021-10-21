@@ -11,13 +11,23 @@
 		src: url('/fonts/'+ $fnamefull +'.woff2') format("woff2");
 	}
 }
-@include font(ConthraxSb,400,'ConthraxSb-Regular',normal);
-@include font(gilroyextra,700,'gilroyextra-bold',normal);
-@include font(Intro,normal,'Intro',normal);
-@include font(IntroInline,normal,'IntroInline',normal);
-@include font(Montserrat,700,'Montserrat-Bold',normal);
-@include font(Montserrat,500,'Montserrat-italic-Medium',normal);
-@include font(Montserrat,500,'Montserrat-Medium',normal);
-@include font(Montserrat,600,'Montserrat-SemiBold',normal);
-@include font(Montserrat,600,'Montserratitalic-SemiBold',normal);
-@include font(MyriadPro,400,'MyriadPro-Regular',normal);
+@include font(Gilroy,900,'Gilroy-Black',normal);
+@include font(Gilroy,900,'Gilroy-BlackItalic',italic);
+@include font(Gilroy,700,'Gilroy-Bold',normal);
+@include font(Gilroy,700,'Gilroy-BoldItalic',italic);
+@include font(Gilroy,800,'Gilroy-Extrabold',normal);
+@include font(Gilroy,800,'Gilroy-ExtraboldItalic',italic);
+@include font(Gilroy,900,'Gilroy-Heavy',normal);
+@include font(Gilroy,900,'Gilroy-HeavyItalic',italic);
+@include font(Gilroy,300,'Gilroy-Light',normal);
+@include font(Gilroy,300,'Gilroy-LightItalic',italic);
+@include font(Gilroy,500,'Gilroy-Medium',normal);
+@include font(Gilroy,500,'Gilroy-MediumItalic',italic);
+@include font(Gilroy,400,'Gilroy-Regular',normal);
+@include font(Gilroy,400,'Gilroy-RegularItalic',italic);
+@include font(Gilroy,600,'Gilroy-Semibold',normal);
+@include font(Gilroy,600,'Gilroy-SemiboldItalic',italic);
+@include font(Gilroy,100,'Gilroy-Thin',normal);
+@include font(Gilroy,100,'Gilroy-ThinItalic',italic);
+@include font(Gilroy,200,'Gilroy-UltraLight',normal);
+@include font(Gilroy,200,'Gilroy-UltraLightItalic',italic);

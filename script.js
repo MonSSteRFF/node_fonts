@@ -30,7 +30,7 @@ fs.readdir(dir, (err, files) => {if (err) {return}
 		let fname = item.toLowerCase().indexOf('italic') !== -1
 			? item.split('-').shift().replace('-','').replace('italic','')
 			: item.split('-').shift().replace('-',''),
-				fontstyle = item.indexOf('italic') !== -1 ? 'italic' : 'normal',
+				fontstyle = item.toLowerCase().indexOf('italic') !== -1 ? 'italic' : 'normal',
 				fontweight = replace_font(item.toLowerCase()),
 				data_to_append = '@include font('+fname+','+fontweight+",'"+item+"',"+fontstyle+');';
 
@@ -39,16 +39,37 @@ fs.readdir(dir, (err, files) => {if (err) {return}
 });
 
 function replace_font($item){
-	let item, naming = $item.split('-').pop();
-	if (naming === 'thin'){item = 100;}
-	else if (naming === 'extralight' || naming === 'ultralight'){item = 200;}
-	else if (naming === 'light'){item = 300;}
-	else if (naming === 'book' || naming === 'normal' || naming === 'regular' || naming === 'roman'){item = 400;}
-	else if (naming === 'medium'){item = 500;}
-	else if (naming === 'semibold' || naming === 'demibold'){item = 600;}
-	else if (naming === 'bold'){item = 700;}
-	else if (naming === 'extrabold' || naming === 'ultrabold'){item = 800;}
-	else if (naming === 'black' || naming === 'heavy'){item = 900;}
-	else {item = 'normal';}
+	let item, naming = $item.split('-').pop().replace('italic','');
+
+	switch (naming){
+		case 'thin':
+			item = 100; break;
+		case 'extralight':
+		case 'ultralight':
+			item = 200; break;
+		case 'light':
+			item = 300; break;
+		case 'book':
+		case 'normal':
+		case 'regular':
+		case 'roman':
+			item = 400; break;
+		case 'medium':
+			item = 500; break;
+		case 'semibold':
+		case 'demibold':
+			item = 600; break;
+		case 'bold':
+			item = 700; break;
+		case 'extrabold':
+		case 'ultrabold':
+			item = 800; break;
+		case 'black':
+		case 'heavy':
+			item = 900; break;
+		default:
+			item = 'normal';
+	}
+
 	return item;
 }
